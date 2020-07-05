@@ -67,6 +67,8 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
+
+              //image container
               Container(
                 width: double.infinity,
                 //height: 400,
@@ -97,8 +99,10 @@ class MyApp extends StatelessWidget {
                       margin: EdgeInsets.only(top: 30),
                       child: Text(
                         "Get gone in football's fastest cheat  | \nThe Nike Vapour Untouchable",
-                        style:
-                            TextStyle(color: Color.fromRGBO(255, 255, 255, .5)),
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromRGBO(255, 255, 255, .5),
+                            letterSpacing: 1),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -111,7 +115,31 @@ class MyApp extends StatelessWidget {
                             color: Color.fromRGBO(255, 255, 255, 1)),
                       ),
                     ),
-                    Container()
+                  ],
+                ),
+              ),
+
+              //section-3
+              Container(
+                decoration:
+                    BoxDecoration(color: Color.fromRGBO(246, 244, 247, 1)),
+                width: double.infinity,
+                padding: EdgeInsets.fromLTRB(40, 50, 0, 50),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      width: double.infinity,
+                      child: Text(
+                        'gift card \nstudent discount \nmilitary discount \nfind a store \nsign up with email'
+                            .toUpperCase(),
+                        style: TextStyle(
+                          height: 2,
+                          fontWeight: FontWeight.w900,
+                          fontSize: 25,
+                          color: Color.fromRGBO(28, 27, 32, 1),
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),
