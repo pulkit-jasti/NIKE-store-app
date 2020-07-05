@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         /*appBar: AppBar(
           title: Text('Pulkit is awesome'),
@@ -112,18 +113,6 @@ class MyApp extends StatelessWidget {
                     ),
                     Container()
                   ],
-                ),
-              ),
-              Container(
-                width: double.infinity,
-                height: 672,
-                padding: EdgeInsets.all(30),
-                decoration:
-                    BoxDecoration(color: Color.fromRGBO(200, 100, 200, 0.5)),
-                child: Text(
-                  'Question-2',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
-                  //textAlign: TextAlign.center,
                 ),
               ),
             ],
