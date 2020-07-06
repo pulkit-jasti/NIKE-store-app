@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
 
 void main() {
   //This is added to make the status bar transparent
@@ -13,6 +14,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   var padding_left = 100;
+  int _index = 0;
   void print_result() {
     print('answer selected');
   }
@@ -27,6 +29,66 @@ class MyApp extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
+              Container(
+                padding: EdgeInsets.fromLTRB(30, 0, 30, 50),
+                decoration:
+                    BoxDecoration(color: Color.fromRGBO(255, 255, 255, 1)),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(top: 60, bottom: 80),
+                      width: double.infinity,
+                      //decoration: BoxDecoration(color: Colors.blue),
+                      child: Image.asset(
+                        'assets/images/nike-logo.png',
+                        height: 40,
+                        alignment: Alignment.centerLeft,
+                      ),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: <Widget>[
+                        Text(
+                          'Bringing',
+                          style: TextStyle(
+                            fontFamily: 'Nike',
+                            fontSize: 45,
+                          ),
+                        ),
+                        Text(
+                          'Inspiration, \nInnovation',
+                          style: TextStyle(
+                            foreground: Paint()
+                              ..style = PaintingStyle.stroke
+                              ..strokeWidth = 1.3,
+                            //fontFamily: 'Futura',
+                            fontSize: 55,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
+                        Text(
+                          'to every athlete in the world',
+                          style: TextStyle(
+                            fontFamily: 'Nike',
+                            fontSize: 43,
+                            letterSpacing: -2,
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(top: 100),
+                          child: Opacity(
+                            opacity: .3,
+                            child: Image.asset(
+                              'assets/images/scroll-down-indicator.png',
+                              height: 60,
+                            ),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
               Container(
                 width: double.infinity,
                 padding: EdgeInsets.fromLTRB(30, 50, 0, 0),
@@ -178,10 +240,44 @@ class MyApp extends StatelessWidget {
                 ),
               ),
 
+              //SHOP SECTION
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.only(left: 30),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      width: double.infinity,
+                      child: Text(
+                        'Shop',
+                        style: TextStyle(
+                          fontFamily: 'Nike',
+                          fontSize: 40,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
               //accordion section
               Container(
                 child: Column(
                   children: <Widget>[
+                    //image container
+                    Container(
+                      padding: EdgeInsets.fromLTRB(30, 40, 0, 20),
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(246, 244, 247, 1),
+                      ),
+                      child: Image.asset(
+                        'assets/images/nike-logo.png',
+                        height: 30,
+                        alignment: Alignment.centerLeft,
+                      ),
+                    ),
                     //main container
                     Container(
                       padding: EdgeInsets.only(left: 20, right: 15, top: 20),
