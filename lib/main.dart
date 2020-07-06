@@ -66,13 +66,13 @@ class MyApp extends StatelessWidget {
                   'Represent who you are and where you come form using Nike Air Max. Create yours with orignal material options, a range of colours and a perosnal message to express your style and your passion',
                   textAlign: TextAlign.justify,
                   style: TextStyle(
-                      fontFamily: 'Futura',
-                      height: 1.5,
-                      fontSize: 22,
-                      color: Color.fromRGBO(0, 0, 0, .5)
-                      //fontWeight: FontWeight.w600,
-                      //letterSpacing: .5,
-                      ),
+                    fontFamily: 'Futura',
+                    height: 1.5,
+                    fontSize: 21,
+                    color: Color.fromRGBO(0, 0, 0, .5),
+                    //fontWeight: FontWeight.w100,
+                    //letterSpacing: .5,
+                  ),
                 ),
               ),
               Container(
@@ -93,11 +93,42 @@ class MyApp extends StatelessWidget {
 
               //image container
               Container(
+                padding: EdgeInsets.only(top: 40, bottom: 60),
                 width: double.infinity,
                 decoration:
                     BoxDecoration(color: Color.fromRGBO(255, 255, 255, 1)),
                 child: Image(
                   image: AssetImage('assets/images/nike-shoe-img.png'),
+                ),
+              ),
+
+              Container(
+                padding: EdgeInsets.only(left: 30, bottom: 40),
+                width: double.infinity,
+                decoration:
+                    BoxDecoration(color: Color.fromRGBO(255, 255, 255, 1)),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Text(
+                      'Nike Air Max 90',
+                      style: TextStyle(
+                        fontFamily: 'Nike',
+                        fontSize: 20,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(top: 7),
+                      child: Text(
+                        '\$ 130.00',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontFamily: 'Futura',
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               ),
 
