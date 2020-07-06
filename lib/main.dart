@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main() {
+  //This is added to make the status bar transparent
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
     statusBarBrightness: Brightness.dark,
@@ -20,22 +21,41 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner:
+          false, //This is added to remove the debug banner on top right corner of the application screen
       home: Scaffold(
-        /*appBar: AppBar(
-          title: Text('Pulkit is awesome'),
-        ),*/
         body: SingleChildScrollView(
           child: Column(
             children: [
               Container(
                 width: double.infinity,
-                padding: EdgeInsets.fromLTRB(30, 50, 0, 40),
+                padding: EdgeInsets.fromLTRB(30, 50, 0, 0),
                 decoration:
                     BoxDecoration(color: Color.fromRGBO(255, 255, 255, 1)),
                 child: Text(
-                  'The Orignal. \nMade your way.',
-                  style: TextStyle(fontSize: 40, fontWeight: FontWeight.w900),
+                  'The Orignal.',
+                  style: TextStyle(
+                    /*foreground: Paint()
+                      ..style = PaintingStyle.stroke
+                      ..strokeWidth = 1,*/
+                    fontFamily: 'Nike',
+                    fontSize: 40,
+                    // fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.fromLTRB(30, 0, 0, 40),
+                decoration:
+                    BoxDecoration(color: Color.fromRGBO(255, 255, 255, 1)),
+                child: Text(
+                  'Made your way.',
+                  style: TextStyle(
+                    fontFamily: 'Nike',
+                    fontSize: 40,
+                    //fontWeight: FontWeight.w900,
+                  ),
                 ),
               ),
               Container(
@@ -46,11 +66,13 @@ class MyApp extends StatelessWidget {
                   'Represent who you are and where you come form using Nike Air Max. Create yours with orignal material options, a range of colours and a perosnal message to express your style and your passion',
                   textAlign: TextAlign.justify,
                   style: TextStyle(
-                    height: 1.5,
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: .5,
-                  ),
+                      fontFamily: 'Futura',
+                      height: 1.5,
+                      fontSize: 22,
+                      color: Color.fromRGBO(0, 0, 0, .5)
+                      //fontWeight: FontWeight.w600,
+                      //letterSpacing: .5,
+                      ),
                 ),
               ),
               Container(
@@ -59,11 +81,12 @@ class MyApp extends StatelessWidget {
                 decoration:
                     BoxDecoration(color: Color.fromRGBO(255, 255, 255, 1)),
                 child: Text(
-                  '+   Show More'.toUpperCase(),
+                  '+  Show More'.toUpperCase(),
                   textAlign: TextAlign.left,
                   style: TextStyle(
+                    fontFamily: 'Futura',
                     fontSize: 15,
-                    fontWeight: FontWeight.w900,
+                    //fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
@@ -71,7 +94,6 @@ class MyApp extends StatelessWidget {
               //image container
               Container(
                 width: double.infinity,
-                //height: 400,
                 decoration:
                     BoxDecoration(color: Color.fromRGBO(255, 255, 255, 1)),
                 child: Image(
@@ -90,9 +112,11 @@ class MyApp extends StatelessWidget {
                       child: Text(
                         'Speed knows no limit',
                         style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.w700,
-                            color: Color.fromRGBO(255, 255, 255, 1)),
+                          fontFamily: 'Nike',
+                          fontSize: 25,
+                          fontWeight: FontWeight.w700,
+                          color: Color.fromRGBO(255, 255, 255, 1),
+                        ),
                       ),
                     ),
                     Container(
@@ -100,19 +124,23 @@ class MyApp extends StatelessWidget {
                       child: Text(
                         "Get gone in football's fastest cheat  | \nThe Nike Vapour Untouchable",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromRGBO(255, 255, 255, .5),
-                            letterSpacing: 1),
+                          fontFamily: 'Futura',
+                          fontSize: 17,
+                          color: Color.fromRGBO(255, 255, 255, .5),
+                          letterSpacing: 1,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.only(top: 40),
                       child: Text(
-                        '+ show more'.toUpperCase(),
+                        '+  show more'.toUpperCase(),
                         style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            color: Color.fromRGBO(255, 255, 255, 1)),
+                          fontFamily: 'Futura',
+                          letterSpacing: .5,
+                          color: Color.fromRGBO(255, 255, 255, 1),
+                        ),
                       ),
                     ),
                   ],
@@ -134,6 +162,7 @@ class MyApp extends StatelessWidget {
                         title: Text(
                           'about'.toUpperCase(),
                           style: TextStyle(
+                            fontFamily: 'Futura',
                             fontSize: 17,
                             fontWeight: FontWeight.w900,
                             letterSpacing: .5,
@@ -162,6 +191,7 @@ class MyApp extends StatelessWidget {
                         title: Text(
                           'men'.toUpperCase(),
                           style: TextStyle(
+                            fontFamily: 'Futura',
                             fontSize: 17,
                             fontWeight: FontWeight.w900,
                             letterSpacing: .5,
@@ -190,6 +220,7 @@ class MyApp extends StatelessWidget {
                         title: Text(
                           'women'.toUpperCase(),
                           style: TextStyle(
+                            fontFamily: 'Futura',
                             fontSize: 17,
                             fontWeight: FontWeight.w900,
                             letterSpacing: .5,
@@ -218,6 +249,7 @@ class MyApp extends StatelessWidget {
                         title: Text(
                           'kids'.toUpperCase(),
                           style: TextStyle(
+                            fontFamily: 'Futura',
                             fontSize: 17,
                             fontWeight: FontWeight.w900,
                             letterSpacing: .5,
@@ -246,6 +278,7 @@ class MyApp extends StatelessWidget {
                         title: Text(
                           'features'.toUpperCase(),
                           style: TextStyle(
+                            fontFamily: 'Futura',
                             fontSize: 17,
                             fontWeight: FontWeight.w900,
                             letterSpacing: .5,
@@ -282,6 +315,7 @@ class MyApp extends StatelessWidget {
                         'gift card \nstudent discount \nmilitary discount \nfind a store \nsign up with email'
                             .toUpperCase(),
                         style: TextStyle(
+                          fontFamily: 'Futura',
                           height: 2,
                           fontWeight: FontWeight.w900,
                           fontSize: 25,
