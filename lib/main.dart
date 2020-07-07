@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
 
 void main() {
   //This is added to make the status bar transparent
@@ -243,10 +242,11 @@ class MyApp extends StatelessWidget {
               //SHOP SECTION
               Container(
                 width: double.infinity,
-                padding: EdgeInsets.only(left: 30),
+                //padding: EdgeInsets.only(left: 30),
                 child: Column(
                   children: <Widget>[
                     Container(
+                      margin: EdgeInsets.fromLTRB(40, 30, 0, 30),
                       width: double.infinity,
                       child: Text(
                         'Shop',
@@ -257,6 +257,43 @@ class MyApp extends StatelessWidget {
                         textAlign: TextAlign.left,
                       ),
                     ),
+                    Container(
+                      //padding: EdgeInsets.only(right: 30),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: <Widget>[
+                            Container(
+                              margin: EdgeInsets.only(left: 40, right: 20),
+                              width: 250,
+                              height: 300,
+                              decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 20, right: 20),
+                              width: 250,
+                              height: 300,
+                              decoration: BoxDecoration(
+                                color: Colors.cyan,
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 20, right: 40),
+                              width: 250,
+                              height: 300,
+                              decoration: BoxDecoration(
+                                color: Colors.green,
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),
