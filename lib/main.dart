@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -29,68 +31,112 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.fromLTRB(30, 0, 30, 50),
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 50),
                 decoration:
                     BoxDecoration(color: Color.fromRGBO(255, 255, 255, 1)),
-                child: Column(
+                child: Stack(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.only(top: 60, bottom: 80),
+                      height: 500,
                       width: double.infinity,
-                      //decoration: BoxDecoration(color: Colors.blue),
-                      child: Image.asset(
-                        'assets/images/nike-logo.png',
-                        height: 40,
-                        alignment: Alignment.centerLeft,
+                      //decoration: BoxDecoration(color: Colors.cyan),
+                      child: Stack(
+                        overflow: Overflow.visible,
+                        children: <Widget>[
+                          Positioned(
+                            top: -30,
+                            left: 180,
+                            child: Container(
+                              height: 800,
+                              width: 800,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(500),
+                                color: Color.fromRGBO(255, 100, 0, 1),
+                              ),
+                            ),
+                          )
+                        ],
                       ),
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: <Widget>[
-                        Text(
-                          'Bringing',
-                          style: TextStyle(
-                            fontFamily: 'Nike',
-                            fontSize: 45,
-                          ),
-                        ),
-                        Text(
-                          'Inspiration, \nInnovation',
-                          style: TextStyle(
-                            foreground: Paint()
-                              ..style = PaintingStyle.stroke
-                              ..strokeWidth = 1.3,
-                            //fontFamily: 'Futura',
-                            fontSize: 55,
-                            fontWeight: FontWeight.w900,
-                          ),
-                        ),
-                        Text(
-                          'to every athlete in the world',
-                          style: TextStyle(
-                            fontFamily: 'Nike',
-                            fontSize: 43,
-                            letterSpacing: -2,
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(top: 100),
-                          child: Opacity(
-                            opacity: .3,
-                            child: Image.asset(
-                              'assets/images/scroll-down-indicator.png',
-                              height: 60,
+                    BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: 50, sigmaY: 50),
+                      child: Container(
+                        padding:
+                            EdgeInsets.only(left: 30, right: 30, bottom: 50),
+                        //decoration: BoxDecoration(color: Colors.grey),
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                              margin: EdgeInsets.only(top: 60, bottom: 80),
+                              width: double.infinity,
+                              //decoration: BoxDecoration(color: Colors.blue),
+                              child: Image.asset(
+                                'assets/images/nike-logo.png',
+                                height: 40,
+                                alignment: Alignment.centerLeft,
+                              ),
                             ),
-                          ),
-                        )
-                      ],
-                    )
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: <Widget>[
+                                Text(
+                                  'Bringing',
+                                  style: TextStyle(
+                                    fontFamily: 'Nike',
+                                    fontSize: 45,
+                                  ),
+                                ),
+                                Text(
+                                  'Inspiration, \nInnovation',
+                                  style: TextStyle(
+                                    foreground: Paint()
+                                      ..style = PaintingStyle.stroke
+                                      ..strokeWidth = 1.3,
+                                    //fontFamily: 'Futura',
+                                    fontSize: 55,
+                                    fontWeight: FontWeight.w900,
+                                  ),
+                                ),
+                                Text(
+                                  'to every athlete in the world',
+                                  style: TextStyle(
+                                    fontFamily: 'Nike',
+                                    fontSize: 43,
+                                    letterSpacing: -2,
+                                  ),
+                                ),
+                                Container(
+                                  padding: EdgeInsets.only(top: 100),
+                                  child: Opacity(
+                                    opacity: .3,
+                                    child: Image.asset(
+                                      'assets/images/scroll-down-indicator.png',
+                                      height: 60,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
+
+              //
+              //
+              //
+              //
+              //
+              //
+              //
+              //
+              //The orignal section
               Container(
                 width: double.infinity,
-                padding: EdgeInsets.fromLTRB(30, 50, 0, 0),
+                padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
                 decoration:
                     BoxDecoration(color: Color.fromRGBO(255, 255, 255, 1)),
                 child: Text(
