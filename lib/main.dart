@@ -266,10 +266,110 @@ class MyApp extends StatelessWidget {
                             Container(
                               margin: EdgeInsets.only(left: 40, right: 20),
                               width: 250,
-                              height: 300,
+                              height: 380,
                               decoration: BoxDecoration(
-                                color: Colors.blue,
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Color.fromRGBO(1, 54, 175, 1),
+                                    Color.fromRGBO(56, 182, 255, 1),
+                                  ],
+                                  begin: Alignment(-1.0, -1.5),
+                                  end: Alignment(1.0, 1.5),
+                                ),
                                 borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Stack(
+                                overflow: Overflow.visible,
+                                children: <Widget>[
+                                  Positioned(
+                                    top: 20,
+                                    left: 20,
+                                    child: Text(
+                                      '01',
+                                      style: TextStyle(
+                                        fontSize: 40,
+                                        fontFamily: 'Nike',
+                                        fontWeight: FontWeight.w900,
+                                        color:
+                                            Color.fromRGBO(255, 255, 255, .5),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    right: -30,
+                                    top: 10,
+                                    child: Transform.rotate(
+                                      angle: -0.4,
+                                      child: Image.asset(
+                                        'assets/images/blue.png',
+                                        width: 280,
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    top: 220,
+                                    left: 20,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Container(
+                                          child: Text(
+                                            'Nike Air Max 70',
+                                            style: TextStyle(
+                                              fontFamily: 'Futura',
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.w400,
+                                              letterSpacing: .5,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          margin: EdgeInsets.only(top: 7),
+                                          child: Text(
+                                            '\$  140',
+                                            style: TextStyle(
+                                              fontFamily: 'Futura',
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.w700,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Positioned(
+                                    bottom: 10,
+                                    left: 11,
+                                    child: Container(
+                                      padding:
+                                          EdgeInsets.fromLTRB(50, 17, 50, 13),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: Row(
+                                        children: <Widget>[
+                                          Container(
+                                            margin: EdgeInsets.only(right: 10),
+                                            child: Text(
+                                              'add to Cart'.toUpperCase(),
+                                              style: TextStyle(
+                                                fontFamily: 'Futura',
+                                                fontSize: 19,
+                                                fontWeight: FontWeight.w400,
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                          ),
+                                          Icon(Icons.add_shopping_cart),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                             Container(
@@ -277,7 +377,14 @@ class MyApp extends StatelessWidget {
                               width: 250,
                               height: 300,
                               decoration: BoxDecoration(
-                                color: Colors.cyan,
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Color.fromRGBO(1, 54, 175, 1),
+                                    Color.fromRGBO(56, 182, 255, 1),
+                                  ],
+                                  begin: Alignment(-1.0, -1.5),
+                                  end: Alignment(1.0, 1.5),
+                                ),
                                 borderRadius: BorderRadius.circular(30),
                               ),
                             ),
@@ -286,7 +393,14 @@ class MyApp extends StatelessWidget {
                               width: 250,
                               height: 300,
                               decoration: BoxDecoration(
-                                color: Colors.green,
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Color.fromRGBO(1, 54, 175, 1),
+                                    Color.fromRGBO(56, 182, 255, 1),
+                                  ],
+                                  begin: Alignment(-1.0, -1.5),
+                                  end: Alignment(1.0, 1.5),
+                                ),
                                 borderRadius: BorderRadius.circular(30),
                               ),
                             )
