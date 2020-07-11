@@ -294,7 +294,10 @@ class MyApp extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.fromLTRB(40, 30, 0, 30),
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(246, 244, 247, 1),
+                      ),
+                      padding: EdgeInsets.fromLTRB(40, 30, 0, 30),
                       width: double.infinity,
                       child: Text(
                         'Shop',
@@ -307,23 +310,40 @@ class MyApp extends StatelessWidget {
                     ),
                     Container(
                       //padding: EdgeInsets.only(right: 30),
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(246, 244, 247, 1),
+                      ),
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
                           children: <Widget>[
                             productCard(
+                              marginLeft: 40,
                               index: '01',
                               shoeName: 'Nike Air Max 80',
-                              marginLeft: 40,
+                              gradientStart: Color.fromRGBO(4, 93, 233, 1),
+                              gradientEnd: Color.fromRGBO(0, 249, 253, 1),
                             ),
                             productCard(
                               index: '02',
                               shoeName: 'Nike Air Jordan',
                               path: 'assets/images/red.png',
+                              gradientStart: Color.fromRGBO(254, 95, 117, 1),
+                              gradientEnd: Color.fromRGBO(252, 152, 66, 1),
                             ),
                             productCard(
                               index: '03',
                               shoeName: 'Nike Blazer',
+                              path: 'assets/images/green.png',
+                              gradientStart: Color.fromRGBO(17, 153, 142, 1),
+                              gradientEnd: Color.fromRGBO(28, 230, 105, 1),
+                            ),
+                            productCard(
+                              index: '04',
+                              shoeName: 'Nike Blazer',
+                              path: 'assets/images/orange.png',
+                              gradientStart: Color.fromRGBO(252, 74, 26, 1),
+                              gradientEnd: Color.fromRGBO(247, 183, 51, 1),
                               marginRight: 50,
                             ),
                           ],

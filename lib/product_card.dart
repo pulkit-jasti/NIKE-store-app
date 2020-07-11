@@ -5,14 +5,17 @@ import 'package:flutter/material.dart';
 class productCard extends StatelessWidget {
   double marginLeft, marginRight;
   String index, path, shoeName, cost;
+  Color gradientStart, gradientEnd;
 
   productCard({
     this.index = '01',
     this.path = 'assets/images/blue.png',
     this.shoeName = 'Nike Air Max 90',
-    this.cost,
+    this.cost = '\$ 130',
     this.marginLeft = 50,
     this.marginRight = 0,
+    this.gradientStart,
+    this.gradientEnd,
   });
 
   @override
@@ -24,8 +27,10 @@ class productCard extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromRGBO(1, 54, 175, 1),
-            Color.fromRGBO(56, 182, 255, 1),
+            //Color.fromRGBO(1, 54, 175, 1),
+            //Color.fromRGBO(56, 182, 255, 1),
+            gradientStart,
+            gradientEnd,
           ],
           begin: Alignment(-1.0, -1.5),
           end: Alignment(1.0, 1.5),
@@ -80,7 +85,7 @@ class productCard extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(top: 7),
                   child: Text(
-                    '\$  140',
+                    cost,
                     style: TextStyle(
                       fontFamily: 'Futura',
                       fontSize: 25,
