@@ -372,7 +372,7 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                     //main container
-                    Container(
+                    /*Container(
                       padding: EdgeInsets.only(left: 20, right: 15, top: 20),
                       decoration: BoxDecoration(
                         color: Color.fromRGBO(246, 244, 247, 1),
@@ -400,7 +400,7 @@ class MyApp extends StatelessWidget {
                           )
                         ],
                       ),
-                    ),
+                    ),*/
                     Container(
                       padding: EdgeInsets.only(left: 20, right: 15),
                       decoration: BoxDecoration(
