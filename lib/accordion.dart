@@ -7,7 +7,7 @@ class accordion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 20, right: 15, top: 20),
+      padding: EdgeInsets.only(left: 20, right: 15, top: 5),
       decoration: BoxDecoration(
         color: Color.fromRGBO(246, 244, 247, 1),
       ),
@@ -24,7 +24,7 @@ class accordion extends StatelessWidget {
         ),
         children: <Widget>[
           Container(
-            padding: EdgeInsets.fromLTRB(15, 10, 30, 10),
+            padding: EdgeInsets.fromLTRB(15, 10, 30, 20),
             decoration: BoxDecoration(color: Color.fromRGBO(246, 244, 247, 1)),
             child: Text(
               content,

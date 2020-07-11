@@ -139,7 +139,7 @@ class MyApp extends StatelessWidget {
               //The orignal section
               Container(
                 width: double.infinity,
-                padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                padding: EdgeInsets.fromLTRB(30, 60, 0, 0),
                 decoration:
                     BoxDecoration(color: Color.fromRGBO(255, 255, 255, 1)),
                 child: Text(
@@ -288,6 +288,17 @@ class MyApp extends StatelessWidget {
                 ),
               ),
 
+              //
+              //
+              //
+              //
+              //
+              //
+              //
+              //
+              //
+              //
+              //
               //SHOP SECTION
               Container(
                 width: double.infinity,
@@ -310,7 +321,7 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      //padding: EdgeInsets.only(right: 30),
+                      padding: EdgeInsets.only(bottom: 40),
                       decoration: BoxDecoration(
                         color: Color.fromRGBO(246, 244, 247, 1),
                       ),
@@ -355,13 +366,27 @@ class MyApp extends StatelessWidget {
                 ),
               ),
 
+              //
+              //
+              //
+              //
+              //
+              //
+              //
+              //
+              //
+              //
+              //
+              //
+              //
+              //
               //accordion section
               Container(
                 child: Column(
                   children: <Widget>[
                     //image container
                     Container(
-                      padding: EdgeInsets.fromLTRB(30, 40, 0, 20),
+                      padding: EdgeInsets.fromLTRB(30, 50, 0, 50),
                       width: double.infinity,
                       decoration: BoxDecoration(
                         color: Color.fromRGBO(246, 244, 247, 1),
@@ -401,7 +426,6 @@ class MyApp extends StatelessWidget {
                 ),
               ),
 
-              //section-3
               Container(
                 decoration:
                     BoxDecoration(color: Color.fromRGBO(246, 244, 247, 1)),
