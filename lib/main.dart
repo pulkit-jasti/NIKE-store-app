@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import './product_card.dart';
+import './accordion.dart';
 
 void main() {
   //This is added to make the status bar transparent
@@ -371,151 +372,30 @@ class MyApp extends StatelessWidget {
                         alignment: Alignment.centerLeft,
                       ),
                     ),
-                    //main container
-                    /*Container(
-                      padding: EdgeInsets.only(left: 20, right: 15, top: 20),
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(246, 244, 247, 1),
-                      ),
-                      child: ExpansionTile(
-                        backgroundColor: Color.fromRGBO(246, 244, 247, 1),
-                        title: Text(
-                          'about'.toUpperCase(),
-                          style: TextStyle(
-                            fontFamily: 'Futura',
-                            fontSize: 17,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: .5,
-                          ),
-                        ),
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.fromLTRB(15, 10, 30, 20),
-                            decoration: BoxDecoration(
-                                color: Color.fromRGBO(246, 244, 247, 1)),
-                            child: Text(
-                              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-                              textAlign: TextAlign.justify,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),*/
-                    Container(
-                      padding: EdgeInsets.only(left: 20, right: 15),
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(246, 244, 247, 1),
-                      ),
-                      child: ExpansionTile(
-                        backgroundColor: Color.fromRGBO(246, 244, 247, 1),
-                        title: Text(
-                          'men'.toUpperCase(),
-                          style: TextStyle(
-                            fontFamily: 'Futura',
-                            fontSize: 17,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: .5,
-                          ),
-                        ),
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.fromLTRB(15, 10, 30, 20),
-                            decoration: BoxDecoration(
-                                color: Color.fromRGBO(246, 244, 247, 1)),
-                            child: Text(
-                              "when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-                              textAlign: TextAlign.justify,
-                            ),
-                          )
-                        ],
-                      ),
+                    accordion(
+                      title: 'about',
+                      content:
+                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
                     ),
-                    Container(
-                      padding: EdgeInsets.only(left: 20, right: 15),
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(246, 244, 247, 1),
-                      ),
-                      child: ExpansionTile(
-                        backgroundColor: Color.fromRGBO(246, 244, 247, 1),
-                        title: Text(
-                          'women'.toUpperCase(),
-                          style: TextStyle(
-                            fontFamily: 'Futura',
-                            fontSize: 17,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: .5,
-                          ),
-                        ),
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.fromLTRB(15, 10, 30, 20),
-                            decoration: BoxDecoration(
-                                color: Color.fromRGBO(246, 244, 247, 1)),
-                            child: Text(
-                              "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                              textAlign: TextAlign.justify,
-                            ),
-                          )
-                        ],
-                      ),
+                    accordion(
+                      title: 'men',
+                      content:
+                          "when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
                     ),
-                    Container(
-                      padding: EdgeInsets.only(left: 20, right: 15),
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(246, 244, 247, 1),
-                      ),
-                      child: ExpansionTile(
-                        backgroundColor: Color.fromRGBO(246, 244, 247, 1),
-                        title: Text(
-                          'kids'.toUpperCase(),
-                          style: TextStyle(
-                            fontFamily: 'Futura',
-                            fontSize: 17,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: .5,
-                          ),
-                        ),
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.fromLTRB(15, 10, 30, 20),
-                            decoration: BoxDecoration(
-                                color: Color.fromRGBO(246, 244, 247, 1)),
-                            child: Text(
-                              "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                              textAlign: TextAlign.justify,
-                            ),
-                          )
-                        ],
-                      ),
+                    accordion(
+                      title: 'women',
+                      content:
+                          "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                     ),
-                    Container(
-                      padding: EdgeInsets.only(left: 20, right: 15),
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(246, 244, 247, 1),
-                      ),
-                      child: ExpansionTile(
-                        backgroundColor: Color.fromRGBO(246, 244, 247, 1),
-                        title: Text(
-                          'features'.toUpperCase(),
-                          style: TextStyle(
-                            fontFamily: 'Futura',
-                            fontSize: 17,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: .5,
-                          ),
-                        ),
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.fromLTRB(15, 10, 30, 20),
-                            decoration: BoxDecoration(
-                                color: Color.fromRGBO(246, 244, 247, 1)),
-                            child: Text(
-                              "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-                              textAlign: TextAlign.justify,
-                            ),
-                          )
-                        ],
-                      ),
+                    accordion(
+                      title: 'kids',
+                      content:
+                          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    ),
+                    accordion(
+                      title: 'features',
+                      content:
+                          "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
                     ),
                   ],
                 ),
